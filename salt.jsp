@@ -32,6 +32,9 @@
         <div ID="fear" style="display:block;">
           <img src="fear.png" class="img-fluid" id="fear" width="100" height="100">
         </div>
+        <div ID="anger" style="display:block;">
+          <img src="anger.png" class="img-fluid" id="anger" width="100" height="100">
+        </div>
 
         <button id="inputbutton">Input</button>
 
@@ -67,6 +70,12 @@ $(document).ready(function() {
 
         // Get the DOM reference
         contentId = document.getElementById("fear");
+        // Toggle
+        contentId.style.display == "block" ? contentId.style.display = "none" :
+        contentId.style.display = "block";
+
+        // Get the DOM reference
+        contentId = document.getElementById("anger");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
@@ -109,6 +118,12 @@ $(document).ready(function() {
         function toggleAnger()
         {
           snowStorm.toggleSnow();
+
+          // Get the DOM reference
+          var contentId = document.getElementById("anger");
+          // Toggle
+          contentId.style.display == "block" ? contentId.style.display = "none" :
+          contentId.style.display = "block";
         }
 
         function toggleHappy()
