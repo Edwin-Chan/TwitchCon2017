@@ -105,11 +105,5 @@
       }
     </script>
 
-    <button onclick="toggleHappy()">Toggle Happy</button>
-    <button onclick="toggleSad()">Toggle Sad</button>
-    <button onclick="toggleDisgust()">Toggle Disgust</button>
-    <button onclick="toggleSurprise()">Toggle Surprise</button>
-    <button onclick="toggleFear()">Toggle Fear</button>
-
     </body>
 </html>
