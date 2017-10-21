@@ -3,107 +3,214 @@
 <html>
     <head>
       <!-- <meta http-equiv="refresh" content="3"> -->
+      <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     </head>
+<!--<style>body{
+    background-color: #000000;}
+  </style>-->
 
-    <body>
-      <div ID="happy" style="display:block;">
-        <img src="happy.jpg" class="img-fluid" id="happy" width="100" height="100">
-      </div>
+      <body>
+        <div ID="happy" style="display:block;">
+          <img src="happy.jpg" class="img-fluid" id="happy" width="100" height="100">
+        </div>
 
-      <div ID="sad" style="display:block;">
-        <img src="sad.jpg" class="img-fluid" id="sad" width="100" height="100">
-      </div>
+        <div ID="sad" style="display:block;">
+          <img src="sad.jpg" class="img-fluid" id="sad" width="100" height="100">
+        </div>
 
-      <div ID="surprise" style="display:block;">
-        <img src="surprise.png" class="img-fluid" id="surprise" width="100" height="100">
-      </div>
+        <div ID="surprise" style="display:block;">
+          <img src="surprise.png" class="img-fluid" id="surprise" width="100" height="100">
+        </div>
 
-      <div ID="disgust" style="display:block;">
-        <img src="disgust.png" class="img-fluid" id="disgust" width="100" height="100">
-      </div>
+        <div ID="disgust" style="display:block;">
+          <img src="disgust.png" class="img-fluid" id="disgust" width="100" height="100">
+        </div>
 
-      <div ID="fear" style="display:block;">
-        <img src="fear.png" class="img-fluid" id="fear" width="100" height="100">
-      </div>
+        <div ID="fear" style="display:block;">
+          <img src="fear.png" class="img-fluid" id="fear" width="100" height="100">
+        </div>
 
-      <button onclick="input()">Input</button>
+        <button id="inputbutton">Input</button>
 
-    <script type="text/javascript">
-      function toggleHappy()
+      <script type="text/javascript" src="snowstorm.js"></script>
+      <script>
+
+$(document).ready(function() {
+      function initialSort()
       {
         // Get the DOM reference
         var contentId = document.getElementById("happy");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
-      }
 
-      function toggleSad()
-      {
         // Get the DOM reference
-        var contentId = document.getElementById("sad");
+        contentId = document.getElementById("sad");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
-      }
 
-      function toggleDisgust()
-      {
         // Get the DOM reference
-        var contentId = document.getElementById("disgust");
+        contentId = document.getElementById("disgust");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
-      }
 
-      function toggleSurprise()
-      {
         // Get the DOM reference
-        var contentId = document.getElementById("surprise");
+        contentId = document.getElementById("surprise");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
-      }
 
-      function toggleFear()
-      {
         // Get the DOM reference
-        var contentId = document.getElementById("fear");
+        contentId = document.getElementById("fear");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
+        //snowStorm.autoStart = false;
+    //    snowStorm.freeze();
+        //var storm = snowStorm;
+        //console.log(storm);
+      //  window.snowStorm(window, document);
+
+        /*
+        function input()
+        {
+          var emote = prompt("Please enter your emote");
+
+          if(emote == "happy")
+          {
+            toggleHappy();
+          }
+
+          if(emote == "sad")
+          {
+            toggleSad();
+          }
+
+          if(emote == "disgust")
+          {
+            toggleDisgust();
+          }
+
+          if(emote == "surprise")
+          {
+            toggleSurprise();
+          }
+
+          if(emote == "fear")
+          {
+            toggleFear();
+          }
+        }
+        */
       }
 
-      function input()
-      {
-        var emote = prompt("Please enter your emote");
+        // var snow = false;
 
-        if(emote == "happy")
+        function toggleAnger()
         {
-          toggleHappy();
+          snowStorm.toggleSnow();
+          // if(snow)
+          // {
+          //   snowStorm.stop();
+          //   snow = false;
+          // }
+          // else
+          // {
+          //   snowStorm.resume();
+          //   //snowstorm();
+          //   snow = true;
+          // }
         }
 
-        if(emote == "sad")
+        function toggleHappy()
         {
-          toggleSad();
+          // Get the DOM reference
+          var contentId = document.getElementById("happy");
+          // Toggle
+          contentId.style.display == "block" ? contentId.style.display = "none" :
+          contentId.style.display = "block";
         }
 
-        if(emote == "disgust")
+        function toggleSad()
         {
-          toggleDisgust();
+          // Get the DOM reference
+          var contentId = document.getElementById("sad");
+          // Toggle
+          contentId.style.display == "block" ? contentId.style.display = "none" :
+          contentId.style.display = "block";
         }
 
-        if(emote == "surprise")
+        function toggleDisgust()
         {
-          toggleSurprise();
+          // Get the DOM reference
+          var contentId = document.getElementById("disgust");
+          // Toggle
+          contentId.style.display == "block" ? contentId.style.display = "none" :
+          contentId.style.display = "block";
         }
 
-        if(emote == "fear")
+        function toggleSurprise()
         {
-          toggleFear();
+          // Get the DOM reference
+          var contentId = document.getElementById("surprise");
+          // Toggle
+          contentId.style.display == "block" ? contentId.style.display = "none" :
+          contentId.style.display = "block";
         }
-      }
-    </script>
 
-    </body>
+        function toggleFear()
+        {
+          // Get the DOM reference
+          var contentId = document.getElementById("fear");
+          // Toggle
+          contentId.style.display == "block" ? contentId.style.display = "none" :
+          contentId.style.display = "block";
+        }
+
+        $("#inputbutton").on("click", function()
+        {
+          var emote = prompt("Please enter your emote");
+
+          if(emote == "happy")
+          {
+            toggleHappy();
+          }
+
+          if(emote == "sad")
+          {
+            toggleSad();
+          }
+
+          if(emote == "disgust")
+          {
+            toggleDisgust();
+          }
+
+          if(emote == "surprise")
+          {
+            toggleSurprise();
+          }
+
+          if(emote == "fear")
+          {
+            toggleFear();
+          }
+
+          if(emote == "anger")
+          {
+            toggleAnger();
+          }
+        });
+
+          initialSort();
+
+      });
+      </script>
+
+      </body>
 </html>
