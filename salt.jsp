@@ -26,7 +26,7 @@
         <img src="fear.png" class="img-fluid" id="fear" width="100" height="100">
       </div>
 
-
+      <button onclick="input()">Input</button>
 
     <script type="text/javascript">
       function toggleHappy()
@@ -37,9 +37,6 @@
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
       }
-      </script>
-
-      <script type="text/javascript">
 
       function toggleSad()
       {
@@ -75,6 +72,36 @@
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
+      }
+
+      function input()
+      {
+        var emote = prompt("Please enter your emote");
+
+        if(emote == "happy")
+        {
+          toggleHappy();
+        }
+
+        if(emote == "sad")
+        {
+          toggleSad();
+        }
+
+        if(emote == "disgust")
+        {
+          toggleDisgust();
+        }
+
+        if(emote == "surprise")
+        {
+          toggleSurprise();
+        }
+
+        if(emote == "fear")
+        {
+          toggleFear();
+        }
       }
     </script>
 
