@@ -12,7 +12,7 @@ public class salt
   int fear = 0;
   int disgust = 0;
   int neutral = 0;
-  int suprise = 0;
+  int surprise = 0;
 
   public static void main(String[] args)
   {
@@ -28,7 +28,7 @@ public class salt
     imagePull("fear", fear);
     imagePull("disgust", disgust);
     imagePull("neutral", neutral);
-    imagePull("suprise", suprise);
+    imagePull("surprise", surprise);
   }
 
   public void imagePull (String name, int val)
@@ -96,11 +96,11 @@ public class salt
         } catch (IOException e) { }
       }
 
-      if(name == "suprise" && val == 100)
+      if(name == "surprise" && val == 100)
       {
         BufferedImage img = null;
         try {
-          img = ImageIO.read(new File("suprise.jpg"));
+          img = ImageIO.read(new File("surprise.jpg"));
         } catch (IOException e) { }
       }
     }
