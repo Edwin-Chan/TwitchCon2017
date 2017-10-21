@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import javax.imageio.*;
 
-public class salt extends KeyListener
+public class salt
 {
 
   int sad = 0;
@@ -31,75 +31,77 @@ public class salt extends KeyListener
     imagePull("suprise", suprise);
   }
 
-  public void keyTyped(KeyEvent e) {}
-
-  public void keyPressed(KeyEvent e)
-  {
-    if(e.getKeyChar() == 's')
-    {
-      sad++;
-    }
-
-    if(e.getKeyChar() == 'a')
-    {
-      anger++;
-    }
-
-    if(e.getKeyChar() == 'c')
-    {
-      contempt++;
-    }
-
-    if(e.getKeyChar() == 'h')
-    {
-      happy++;
-    }
-
-    if(e.getKeyChar() == 'f')
-    {
-      fear++;
-    }
-
-    if(e.getKeyChar() == 'd')
-    {
-      disgust++;
-    }
-
-    if(e.getKeyChar() == 'n')
-    {
-      neutral++;
-    }
-
-    if(e.getKeyChar() == 'p')
-    {
-      suprise++;
-    }
-  }
-
-  public void keyReleased(KeyEvent e) {}
-
   public void imagePull (String name, int val)
   {
-    if(name == "salt")
+    if(name == "anger")
     {
       if(val > 50)
       {
-        BufferedImage img = null;
-        try {
-          img = ImageIO.read(new File("IMG_3642.jpg"));
-        } catch (IOException e) { }
-      }
-      else if(val > 75)
-      {
-
-      }
-      else if(val > 90)
-      {
-
+        //meter that moves up
       }
       else if(val == 100)
       {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("anger.jpg"));
+        } catch (IOException e) { }
+        //put over face
+      }
 
+      if(name == "sad" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("sad.jpg"));
+        } catch (IOException e) { }
+      }
+
+      if(name == "contempt" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("contempt.jpg"));
+        } catch (IOException e) { }
+      }
+
+      if(name == "happy" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("happy.jpg"));
+        } catch (IOException e) { }
+      }
+
+      if(name == "fear" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("fear.jpg"));
+        } catch (IOException e) { }
+      }
+
+      if(name == "disgust" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("disgust.jpg"));
+        } catch (IOException e) { }
+      }
+
+      if(name == "neutral" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("neutral.jpg"));
+        } catch (IOException e) { }
+      }
+
+      if(name == "suprise" && val == 100)
+      {
+        BufferedImage img = null;
+        try {
+          img = ImageIO.read(new File("suprise.jpg"));
+        } catch (IOException e) { }
       }
     }
   }
