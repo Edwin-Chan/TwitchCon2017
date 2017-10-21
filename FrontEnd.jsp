@@ -32,6 +32,7 @@
         <div ID="fear" style="display:block;">
           <img src="fear.png" class="img-fluid" id="fear" width="100" height="100">
         </div>
+
         <div ID="anger" style="display:block;">
           <img src="anger.png" class="img-fluid" id="anger" width="100" height="100">
         </div>
@@ -75,7 +76,7 @@ $(document).ready(function() {
         contentId.style.display = "block";
 
         // Get the DOM reference
-        contentId = document.getElementById("anger");
+        var contentId = document.getElementById("anger");
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
@@ -83,37 +84,16 @@ $(document).ready(function() {
         /*
         function input()
         {
-          var emote = prompt("Please enter your emote");
-
-          if(emote == "happy")
-          {
-            toggleHappy();
-          }
-
-          if(emote == "sad")
-          {
-            toggleSad();
-          }
-
-          if(emote == "disgust")
-          {
-            toggleDisgust();
-          }
-
-          if(emote == "surprise")
-          {
-            toggleSurprise();
-          }
-
-          if(emote == "fear")
-          {
-            toggleFear();
-          }
-        }
+          basically this is support to take input from the screencaptures from the JSON
+          this would send values from which we can get whiever emotion is at 100/100 value
+          and take this image and display it
+          currently we didn't have time to completely merge the sides, so we are jsut using
+          buttons in order to do the displays we want. This also messes with the OBS
+          if we had it merged, the values would autoupdate on the website, thus making the
+          OBS overlay autoupdate, but because it's a button they are in different domains
+          and can't autoupdate and show the overlay.
         */
       }
-
-        // var snow = false;
 
         function toggleAnger()
         {
@@ -124,6 +104,23 @@ $(document).ready(function() {
           // Toggle
           contentId.style.display == "block" ? contentId.style.display = "none" :
           contentId.style.display = "block";
+
+          /*
+          var bar = new ProgressBar.Line(container, {
+            strokeWidth: 4,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#FFEA82',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: {width: '100%', height: '100%'}
+          });
+
+          bar.animate(1.0);  // Number from 0.0 to 1.0
+
+          //progress bar animation
+          */
+
         }
 
         function toggleHappy()
