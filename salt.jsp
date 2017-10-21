@@ -8,9 +8,9 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     </head>
-<!--<style>body{
+<style>body{
     background-color: #000000;}
-  </style>-->
+  </style>
 
       <body>
         <div ID="happy" style="display:block;">
@@ -70,11 +70,6 @@ $(document).ready(function() {
         // Toggle
         contentId.style.display == "block" ? contentId.style.display = "none" :
         contentId.style.display = "block";
-        //snowStorm.autoStart = false;
-    //    snowStorm.freeze();
-        //var storm = snowStorm;
-        //console.log(storm);
-      //  window.snowStorm(window, document);
 
         /*
         function input()
@@ -114,17 +109,6 @@ $(document).ready(function() {
         function toggleAnger()
         {
           snowStorm.toggleSnow();
-          // if(snow)
-          // {
-          //   snowStorm.stop();
-          //   snow = false;
-          // }
-          // else
-          // {
-          //   snowStorm.resume();
-          //   //snowstorm();
-          //   snow = true;
-          // }
         }
 
         function toggleHappy()
