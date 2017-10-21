@@ -27,11 +27,74 @@ public class Parsing {
 				System.out.println(e.getMessage());
 		  	}
 		
-		//how to get the items
-			System.out.println(array[0].getFaceRectangle().getHeight());
-			System.out.println(array[0].getFaceRectangle().getLeft());
-			System.out.println(array[0].getFaceRectangle().getTop());
-			System.out.println(array[0].getFaceRectangle().getWidth());
+		//conversion of values from String to Double
+		
+		Double anger  = null;
+		Double contempt  = null;
+		Double disgust = null;
+		Double fear = null;
+		Double neutral = null;
+		Double happiness = null;
+		Double sadness = null;
+		Double surprise = null;
+		anger = Double.parseDouble(array[0].getScores().getAnger());
+		contempt = Double.parseDouble(array[0].getScores().getContempt());
+		disgust = Double.parseDouble(array[0].getScores().getDisgust());
+		fear = Double.parseDouble(array[0].getScores().getFear());
+		neutral = Double.parseDouble(array[0].getScores().getNeutral());
+		happiness = Double.parseDouble(array[0].getScores().getHappiness());
+		sadness = Double.parseDouble(array[0].getScores().getSadness());
+		surprise = Double.parseDouble(array[0].getScores().getSurprise());
+		
+		ArrayList<Double> compare = new ArrayList<Double>();
+		compare.add(anger);
+		compare.add(contempt);
+		compare.add(disgust);
+		compare.add(fear);
+		compare.add(neutral);
+		compare.add(happiness);
+		compare.add(sadness);
+		compare.add(surprise);
+		int largestIndex = 0;
+		Double largest = 0.0;
+		String largestString = "";
+		for (int i = 0; i < compare.size(); i++) {
+			if (largest.compareTo(compare.get(i)) < 0) {
+				largest = compare.get(i);
+				largestIndex = i;
+			}
 		}
-	
+		if (largestIndex == 0) {
+			largestString = "anger";
+		}else if (largestIndex == 1) {
+			largestString = "contempt";
+		} else if (largestIndex == 2) {
+			largestString = "disgust";
+		}else if (largestIndex == 3) {
+			largestString = "fear";
+		}else if (largestIndex == 4) {
+			largestString = "neutral";
+		}else if (largestIndex == 5) {
+			largestString = "happiness";
+		}else if (largestIndex == 6) {
+			largestString = "sadness";
+		}else if (largestIndex == 7) {
+			largestString = "surprise";
+		}
+		
+		anger*=100;
+		contempt*=100;
+		disgust*=100;
+		fear *= 100;
+		neutral*= 100;
+		happiness *= 100;
+		sadness *= 100;
+		surprise *= 100;
+		
+		
+		
+		
+		
+		}
+//	sampleResult.json
 }
